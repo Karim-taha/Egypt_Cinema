@@ -24,6 +24,12 @@ return new class extends Migration
                 ->on('movies')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign("user_id")
+                    ->references('id')
+                    ->on('users')
+                    ->onUpdate('cascade')
+                    ->onDelete('cascade');
             $table->timestamps();
         });
     }
