@@ -22,8 +22,8 @@ return new class extends Migration
                   ->on('eventdays')
                   ->onUpdate('cascade')
                   ->onDelete('cascade');
-            $table->unsignedBigInteger('m_id');
-            $table->foreign("m_id")
+            $table->unsignedBigInteger('movie_id');
+            $table->foreign("movie_id")
                 ->references('id')
                 ->on('movies')
                 ->onUpdate('cascade')

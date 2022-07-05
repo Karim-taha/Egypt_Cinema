@@ -12,7 +12,7 @@ class Movie extends Model
     // Start Relation Functions :
 
     public function showtime(){
-        return $this->hasMany(Showtime::class);
+        return $this->hasOne(Showtime::class);
     }
 
     public function ticket(){
@@ -23,7 +23,7 @@ class Movie extends Model
         return $this->hasMany(Attendee::class);
     }
 
-    public function eventdat(){
+    public function eventday(){
         return $this->belongsTo(Eventday::class);
     }
 
