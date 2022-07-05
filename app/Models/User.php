@@ -23,6 +23,25 @@ class User extends Authenticatable
         'password',
     ];
 
+        /****  Relation Functions : ****/
+
+        public function eventday(){
+            return $this->hasMany(Eventday::class);
+        }
+        public function movie(){
+            return $this->hasMany(Movie::class);
+        }
+        public function showtime(){
+            return $this->hasMany(Showtime::class);
+        }
+        public function ticket(){
+            return $this->hasMany(Ticket::class);
+        }
+
+        // End Relation Functions :
+
+
+
     /**
      * The attributes that should be hidden for serialization.
      *
