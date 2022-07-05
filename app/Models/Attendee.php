@@ -9,6 +9,8 @@ class Attendee extends Model
 {
     use HasFactory;
 
+    protected $fillable = ["att_name", "att_email", "att_phone", "movie_id"];
+
     // Start Relation Functions :
 
     public function ticket(){

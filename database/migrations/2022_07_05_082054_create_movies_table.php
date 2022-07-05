@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
             $table->string('m_name');
+            $table->integer('ticket_price');
             $table->string('m_image');
             $table->unsignedBigInteger('eventday_id');
             $table->foreign("eventday_id")

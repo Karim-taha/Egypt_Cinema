@@ -3,12 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Attendee;
-use App\Models\Movie;
-use App\Models\Showtime;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-class MovieController extends Controller
+class AttendeeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +14,7 @@ class MovieController extends Controller
      */
     public function index()
     {
-        $movies = Movie::all();
-        return view('layout.movies.index', ["movies" => $movies]);
+        //
     }
 
     /**
@@ -26,9 +22,9 @@ class MovieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Movie $movie)
+    public function create()
     {
-        // return view('layout.movies.create', ["movie" => $movie]);
+        //
     }
 
     /**
@@ -39,30 +35,30 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        // $attendee = $request->all();
-        // // dd($attendee);
-        // Attendee::create($attendee);
-        // return redirect()->route('movies.index');
+        $attendee = $request->all();
+        // dd($attendee);
+        Attendee::create($attendee);
+        return redirect()->route('movies.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Movie  $movie
+     * @param  \App\Models\Attendee  $attendee
      * @return \Illuminate\Http\Response
      */
-    public function show(Movie $movie)
+    public function show(Attendee $attendee)
     {
-        return view('layout.movies.create', ["movie" => $movie]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Movie  $movie
+     * @param  \App\Models\Attendee  $attendee
      * @return \Illuminate\Http\Response
      */
-    public function edit(Movie $movie)
+    public function edit(Attendee $attendee)
     {
         //
     }
@@ -71,10 +67,10 @@ class MovieController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Movie  $movie
+     * @param  \App\Models\Attendee  $attendee
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Movie $movie)
+    public function update(Request $request, Attendee $attendee)
     {
         //
     }
@@ -82,10 +78,10 @@ class MovieController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Movie  $movie
+     * @param  \App\Models\Attendee  $attendee
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Movie $movie)
+    public function destroy(Attendee $attendee)
     {
         //
     }
