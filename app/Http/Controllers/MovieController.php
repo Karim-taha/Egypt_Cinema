@@ -39,10 +39,10 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        // $attendee = $request->all();
+        $attendee = $request->all();
         // // dd($attendee);
-        // Attendee::create($attendee);
-        // return redirect()->route('movies.index');
+        Attendee::create($attendee);
+        return redirect()->route('movies.index');
     }
 
     /**

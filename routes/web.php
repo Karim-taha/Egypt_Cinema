@@ -16,7 +16,8 @@ use App\Http\Controllers\AttendeeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('layout.movies.index');
+    return redirect()->route('movies.index');
 });
 
 Route::resource('/movies', MovieController::class);

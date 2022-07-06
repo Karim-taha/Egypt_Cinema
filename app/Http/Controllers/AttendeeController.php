@@ -36,9 +36,9 @@ class AttendeeController extends Controller
     public function store(Request $request)
     {
         $attendee = $request->all();
-        // dd($attendee);
         Attendee::create($attendee);
-        return redirect()->route('movies.index');
+        $lastAttRegistered = Attendee::orderBy('created_at', 'desc')->first();
+        return view("layout.attendees.index", ["attendee" => $lastAttRegistered]);
     }
 
     /**
