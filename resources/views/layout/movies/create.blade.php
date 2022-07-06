@@ -57,16 +57,6 @@
                 <input type="hidden" name="movie_id" value="{{$movie->id}}">
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
-    {{-- <form action="{{route('movies.store')}}" method="POST">
-        @csrf
-        <label for="title">Title : </label>
-        <input type="text" name="title" id="title">
-        <br><br>
-        <label for="body">Body : </label>
-        <input type="text" name="body" id="body">
-        <br><br>
-        <button name="submit">Submit</button>
-    </form> --}}
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

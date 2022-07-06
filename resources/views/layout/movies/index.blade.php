@@ -19,7 +19,6 @@
 <body>
     <div class="container mt-4">
         <h2 class="text-center allmovies">All Movies</h2>
-        {{-- <a href="{{route('users.index')}}" class="btn btn-warning">All Users</a> --}}
         <div class="row">
     <table class="table table-dark">
         <thead>
@@ -45,13 +44,11 @@
                 <td class="movie-name">{{$movie->ticket_price}} $</td>
                 <td><img src="{{asset('images/' . $movie->m_image)}}" alt="No Poster Yet" height="100" width="100"></td>
                 <td><a href="{{route('movies.show', $movie->id)}}" class="btn btn-warning">Register</a></td>
-                {{-- <td><a href="{{route('posts.edit', $post->id)}}" class="btn btn-warning">Edit</a></td> --}}
             </tr>
             @endforeach
         </tbody>
     </table>
 </div>
-    {{-- <a href="{{route('posts.create')}}" class="btn btn-info">Add New Post</a> --}}
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
