@@ -22,3 +22,7 @@ Route::get('/', function () {
 
 Route::resource('/movies', MovieController::class);
 Route::resource('/attendees', AttendeeController::class);
+
+Route::get('/admin', function() {
+    return view ('admin.layouts.admin-dash-layout');
+});
