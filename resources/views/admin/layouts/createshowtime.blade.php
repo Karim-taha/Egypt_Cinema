@@ -17,30 +17,48 @@
     <div class="row">
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-            <form action="#" method="post">
+            <form action="{{ route('showtimes.store')}}" method="post">
                 @csrf
                 <label for="chooseEventDay">Choose Event Day :</label>
                 <select class="form-select" id="chooseEventDay" name="eventday_id" aria-label="Default select example">
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                  <br>
-                <label for="chooseShowTime">Choose From Available Show Time in (Event Day) :</label>
-                <select class="form-select" id="chooseShowTime" name="eventday_id" aria-label="Default select example">
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                  <br>
+                    @foreach ($eventdays as $eventday)
+                        <option value="{{ $eventday->id}}">{{ $eventday->eventday}}</option>
+                    @endforeach
+                </select>
+                <br><br>
                 <label for="chooseMovie">Choose Movie :</label>
-                <select class="form-select" id="chooseMovie" name="eventday_id" aria-label="Default select example">
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                <select class="form-select" id="chooseMovie" name="movie_id" aria-label="Default select example">
+                    @foreach($movies as $movie)
+                    <option value="{{ $movie->id}}">{{ $movie->m_name}}</option>
+                    @endforeach
                   </select>
+                  <br><br>
+                {{-- <label for="chooseShowTime">Choose Show Time :</label>
+                <select class="form-select" id="chooseShowTime" name="showtime" aria-label="Default select example">
+                        <option value="1">6 PM - 8:30 PM</option>
+                        <option value="2">8:30 PM - 10:30 PM</option>
+                        <option value="3">10:30 PM - 1 AM</option>
+                </select> --}}
+                @foreach($showtimes as $showtime)
+
+                @endforeach
+                    @if($showtimes->isNotEmpty())
+                        <label for="chooseShowTime">Choose Show Time :</label>
+                        <select class="form-select" id="chooseShowTime" name="showtime" aria-label="Default select example">
+                            <option value="1">6 PM - 8:30 PM</option>
+                            <option value="2">8:30 PM - 10:30 PM</option>
+                            <option value="3">10:30 PM - 1 AM</option>
+                        </select>
+                    @else
+                        <label for="chooseShowTime">Choose Show Time :</label>
+                        <select class="form-select" id="chooseShowTime" name="showtime" aria-label="Default select example">
+                            <option value="1">6 PM - 8:30 PM</option>
+                            <option value="2">8:30 PM - 10:30 PM</option>
+                            <option value="3">10:30 PM - 1 AM</option>
+                        </select>
+                @endif
                   <br>
-                <input type="hidden" name="user_id" value="" id="">
+                <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
                 <br>
                 <button type="submit" class="btn btn-primary">Create</button>
               </form>

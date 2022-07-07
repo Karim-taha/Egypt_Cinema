@@ -37,9 +37,9 @@
                 </div>
                 <label for="chooseEventDay">Choose Event Day :</label>
                 <select class="form-select" id="chooseEventDay" name="eventday_id" aria-label="Default select example">
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    @foreach ($eventdays as $eventday)
+                        <option value="{{ $eventday->id}}">{{ $eventday->eventday}}</option>
+                    @endforeach
                   </select>
                 <input type="hidden" name="user_id" value="2" id="">
                 <br>

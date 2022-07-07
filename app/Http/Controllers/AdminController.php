@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Movie;
+use App\Models\Eventday;
+use App\Models\Showtime;
 
 class AdminController extends Controller
 {
@@ -23,11 +25,17 @@ class AdminController extends Controller
     }
 
     public function createMovie(){
-        return view('admin.layouts.createmovie');
+        $eventdays = Eventday::all();
+        return view('admin.layouts.createmovie', ["eventdays" => $eventdays]);
     }
 
     public function createShowTime(){
-        return view('admin.layouts.createshowtime');
+
+        $eventdays = Eventday::all();
+        $movies = Movie::all();
+        $showtimes = Showtime::all();
+        return view('admin.layouts.createshowtime')->with(["eventdays" => $eventdays,  "movies" => $movies, "showtimes" => $showtimes]);
+
     }
 
 }

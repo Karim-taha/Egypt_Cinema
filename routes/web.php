@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
-use App\Http\Controllers\AttendeeController;
 use App\Http\Controllers\EventdaysController;
+use App\Http\Controllers\ShowtimeController;
+use App\Http\Controllers\AttendeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::get('/', function () {
 
 Route::resource('/movies', MovieController::class);
 Route::resource('/eventdays', EventdaysController::class);
+Route::resource('/showtimes', ShowtimeController::class);
 Route::resource('/attendees', AttendeeController::class);
 
 

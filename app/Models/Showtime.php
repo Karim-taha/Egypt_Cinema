@@ -9,6 +9,13 @@ class Showtime extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'showtime',
+        'eventday_id',
+        'movie_id',
+        'user_id',
+    ];
+
     // Start Relation Functions :
 
     public function ticket(){

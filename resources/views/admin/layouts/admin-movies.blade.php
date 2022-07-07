@@ -17,14 +17,14 @@
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="text-center mb-5">All Movies</h2>
-                <table class="table table-dark">
+                <table class="table table-dark mb-5">
                     <thead>
                         <th>Movie Name</th>
                         <th>Show Date</th>
                         <th>Show Time</th>
                         <th>Ticket Price</th>
                         <th>Poster</th>
-                        {{-- <th>Edit</th> --}}
+                        <th>Delete</th>
                     </thead>
                     <tbody>
                         @foreach ($movies as $movie)
@@ -42,7 +42,14 @@
                             @endif
                             <td class="movie-name">{{$movie->ticket_price}} $</td>
                             <td><img src="{{asset('images/' . $movie->m_image)}}" alt="No Poster Yet" height="100" width="100"></td>
-                            {{-- <td><a href="{{route('movies.show', $movie->id)}}" class="btn btn-warning">Register</a></td> --}}
+
+                            <form action="{{route('eventdays.destroy', $movie->eventday->id)}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <td><button class="btn btn-danger">Delete</button></td>
+                            </form>
+
+
                         </tr>
                         @endforeach
                     </tbody>

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Eventday;
+use App\Models\Showtime;
 use Illuminate\Http\Request;
 
-class EventdaysController extends Controller
+class ShowtimeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,19 +35,19 @@ class EventdaysController extends Controller
      */
     public function store(Request $request)
     {
-        $eventDays = $request->all();
-        // dd($eventDays);
-        Eventday::create($eventDays);
+        $showtimes = $request->all();
+        // dd($showtimes);
+        Showtime::create($showtimes);
         return redirect()->route('admin.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Eventday  $eventday
+     * @param  \App\Models\Showtime  $showtime
      * @return \Illuminate\Http\Response
      */
-    public function show(Eventday $eventday)
+    public function show(Showtime $showtime)
     {
         //
     }
@@ -55,10 +55,10 @@ class EventdaysController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Eventday  $eventday
+     * @param  \App\Models\Showtime  $showtime
      * @return \Illuminate\Http\Response
      */
-    public function edit(Eventday $eventday)
+    public function edit(Showtime $showtime)
     {
         //
     }
@@ -67,10 +67,10 @@ class EventdaysController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Eventday  $eventday
+     * @param  \App\Models\Showtime  $showtime
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Eventday $eventday)
+    public function update(Request $request, Showtime $showtime)
     {
         //
     }
@@ -78,13 +78,11 @@ class EventdaysController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Eventday  $eventday
+     * @param  \App\Models\Showtime  $showtime
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Eventday $eventday)
+    public function destroy(Showtime $showtime)
     {
-        $eventday->delete();
-        // dd($eventday);
-        return redirect()->route('admin.index');
+        //
     }
 }
