@@ -26,4 +26,8 @@ class AdminController extends Controller
         return view('admin.layouts.createmovie');
     }
 
+    public function createShowTime(){
+        return view('admin.layouts.createshowtime');
+    }
+
 }

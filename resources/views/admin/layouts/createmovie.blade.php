@@ -35,8 +35,8 @@
                     <label for="movieimage">Upload Movie Poster :</label>
                     <input type="file" class="form-control-file" name="m_image" id="movieimage">
                 </div>
-                <label for="movieimage">Choose Event Day :</label>
-                <select class="form-select" name="eventday_id" aria-label="Default select example">
+                <label for="chooseEventDay">Choose Event Day :</label>
+                <select class="form-select" id="chooseEventDay" name="eventday_id" aria-label="Default select example">
                     <option value="1">One</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>

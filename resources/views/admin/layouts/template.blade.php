@@ -79,7 +79,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
                <li class="nav-item">
                 <a href="{{route('admin.createEventDay')}}" class="nav-link">
-                    <p>- </p>
+                    <p>1. </p>
                   <p>
                     Create Event Day
                   </p>
@@ -87,9 +87,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
                <li class="nav-item">
                 <a href="{{route('admin.createMovie')}}" class="nav-link">
-                    <p>- </p>
+                    <p>2. </p>
                   <p>
                     Create Movie
+                  </p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="{{route('admin.createShowTime')}}" class="nav-link">
+                    <p>3. </p>
+                  <p>
+                    Create Show Time
                   </p>
                 </a>
               </li>
