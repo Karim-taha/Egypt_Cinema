@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('eventdays', function (Blueprint $table) {
             $table->id();
-            $table->date('eventday');
+            $table->date('eventday')->unique();
             $table->unsignedBigInteger('user_id');
             $table->foreign("user_id")
                   ->references('id')

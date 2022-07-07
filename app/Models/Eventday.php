@@ -9,6 +9,11 @@ class Eventday extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'eventday',
+        'user_id',
+    ];
+
     // Start Relation Functions :
 
     public function showtime(){

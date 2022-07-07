@@ -17,13 +17,13 @@
     <div class="row">
         <div class="col-lg-4"></div>
         <div class="col-lg-4">
-            <form action="#" method="post">
+            <form action="{{ route('eventdays.store') }}" method="post">
                 @csrf
                 <div class="mb-3">
                     <label for="eventday">Event Day :</label>
                     <input type="date" id="eventday" name="eventday">
                 </div>
-                <input type="hidden" name="user_id" value="" id="">
+                <input type="hidden" name="user_id" value="{{Auth::user()->id}}" id="">
                 <button type="submit" class="btn btn-primary">Create</button>
               </form>
         </div>
