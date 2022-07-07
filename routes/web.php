@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\AttendeeController;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EventdaysController;
 
 /*

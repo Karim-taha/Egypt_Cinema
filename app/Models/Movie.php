@@ -9,6 +9,14 @@ class Movie extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'm_name',
+        'ticket_price',
+        'm_image',
+        'eventday_id',
+        'user_id',
+    ];
+
     // Start Relation Functions :
 
     public function showtime(){

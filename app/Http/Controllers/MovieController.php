@@ -39,10 +39,16 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        $attendee = $request->all();
-        // // dd($attendee);
-        Attendee::create($attendee);
-        return redirect()->route('movies.index');
+        $image = $request->file('m_image')->getClientOriginalName();
+        $imageUpload = $request->file('m_image')->move(public_path('images'), $image);
+        Movie::create([
+            'm_name' => $request->input('m_name'),
+            'ticket_price' => $request->input('ticket_price'),
+            'm_image' => $image,
+            'eventday_id' => $request->input('eventday_id'),
+            'user_id' => $request->input('user_id'),
+        ]);
+        return redirect()->route('admin.index');
     }
 
     /**

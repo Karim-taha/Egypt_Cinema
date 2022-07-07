@@ -35,8 +35,10 @@
                             <td>6 PM - 8:30 PM</td>
                             @elseif($movie->showtime->showtime == 2)
                             <td>8:30 PM - 10:30 PM</td>
-                            @else
+                            @elseif($movie->showtime->showtime == 3)
                             <td>10:30 PM - 1 AM</td>
+                            @else
+                            <td>No Show Time Yet.</td>
                             @endif
                             <td class="movie-name">{{$movie->ticket_price}} $</td>
                             <td><img src="{{asset('images/' . $movie->m_image)}}" alt="No Poster Yet" height="100" width="100"></td>

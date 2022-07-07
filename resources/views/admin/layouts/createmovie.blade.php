@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-lg-4"></div>
         <div class="col-lg-4">
-            <form action="#" method="post">
+            <form action="{{ route('movies.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <div class="mb-3">
@@ -41,7 +41,7 @@
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select>
-                <input type="hidden" name="user_id" value="" id="">
+                <input type="hidden" name="user_id" value="2" id="">
                 <br>
                 <button type="submit" class="btn btn-primary">Create</button>
               </form>
