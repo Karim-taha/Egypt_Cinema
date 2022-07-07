@@ -85,6 +85,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </p>
                 </a>
               </li>
+               <li class="nav-item">
+                <a href="{{route('admin.createMovie')}}" class="nav-link">
+                    <p>- </p>
+                  <p>
+                    Create Movie
+                  </p>
+                </a>
+              </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-user"></i>

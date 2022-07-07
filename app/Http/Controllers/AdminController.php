@@ -22,5 +22,8 @@ class AdminController extends Controller
         return view('admin.layouts.createeventday');
     }
 
+    public function createMovie(){
+        return view('admin.layouts.createmovie');
+    }
 
 }

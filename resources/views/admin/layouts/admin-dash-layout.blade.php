@@ -21,7 +21,7 @@
                   <h4 class="card-title">Steps to Create Event Day and Movies:</h4>
                   <br><br>
                   <p>1. <a href="{{ route('admin.createEventDay') }}" class="card-link">Create Event Day</a></p>
-                  <p>2. <a href="#" class="card-link">Create Movie</a></p>
+                  <p>2. <a href="{{route('admin.createMovie')}}" class="card-link">Create Movie</a></p>
                   <p>3. <a href="#" class="card-link">Create Show Times</a></p>
                 </div>
               </div><!-- /.card -->

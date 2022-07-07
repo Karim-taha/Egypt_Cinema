@@ -15,7 +15,8 @@
 @section('content')
 <div class="container mt-4">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
             <form action="#" method="post">
                 @csrf
                 <div class="mb-3">
@@ -26,6 +27,7 @@
                 <button type="submit" class="btn btn-primary">Create</button>
               </form>
         </div>
+        <div class="col-lg-4"></div>
     </div>
 </div>
 @endsection
