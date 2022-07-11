@@ -33,7 +33,7 @@
                 </div>
                 <div class="form-group">
                     <label for="movieimage">Upload Movie Poster :</label>
-                    <input type="file" class="form-control-file" value="{{old('ticket_price')}}" name="m_image" id="movieimage">
+                    <input type="file" class="form-control-file" value="{{old('m_image')}}" name="m_image" id="movieimage">
                 </div>
                 <label for="chooseEventDay">Choose Event Day :</label>
                 <select class="form-select" id="chooseEventDay" name="eventday_id" aria-label="Default select example">
