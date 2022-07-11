@@ -26,7 +26,7 @@
                 <tbody>
                     <tr>
                         <td class="movie-name">{{$movie->m_name}}</td>
-                        <td><a href="{{route('movies.show',$movie->eventday->id)}}">{{$movie->eventday->eventday}}</a></td>
+                        <td><p>{{$movie->eventday->eventday}}</p></td>
                         @if($movie->showtime->showtime == 1)
                         <td>6 PM - 8:30 PM</td>
                         @elseif($movie->showtime->showtime == 2)
