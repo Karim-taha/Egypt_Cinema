@@ -38,12 +38,15 @@ Route::middleware([
     //     return view('dashboard');
     // })->name('dashboard');
 
+    // Createing Routes :
     Route::get('/admin', "App\Http\Controllers\AdminController@index")->name("admin.index");
     Route::get('/admin/movies', "App\Http\Controllers\AdminController@movies")->name("admin.movies");
     Route::get('/admin/createeventday', "App\Http\Controllers\AdminController@creatEeventDay")->name("admin.createEventDay");
     Route::get('/admin/createmovie', "App\Http\Controllers\AdminController@createMovie")->name("admin.createMovie");
     Route::get('/admin/createhowtime', "App\Http\Controllers\AdminController@createShowTime")->name("admin.createShowTime");
-
+    // Editing Routes :
+    Route::get('/admin/editmovie/{id}', "App\Http\Controllers\AdminController@editmovie")->name("admin.editmovie");
+    Route::post('/admin/updatemovie/{id}', "App\Http\Controllers\AdminController@updatemovie")->name("admin.updatemovie");
 
 });
 

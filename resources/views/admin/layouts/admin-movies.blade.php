@@ -24,6 +24,7 @@
                         <th>Show Time</th>
                         <th>Ticket Price</th>
                         <th>Poster</th>
+                        <th>Edit</th>
                         <th>Delete</th>
                     </thead>
                     <tbody>
@@ -42,7 +43,7 @@
                             @endif
                             <td class="movie-name">{{$movie->ticket_price}} $</td>
                             <td><img src="{{asset('images/' . $movie->m_image)}}" alt="No Poster Yet" height="100" width="100"></td>
-
+                            <td><a href="{{ route('admin.editmovie', $movie->id) }}" class="btn btn-warning">Edit</a></td>
                             <form action="{{route('eventdays.destroy', $movie->eventday->id)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
