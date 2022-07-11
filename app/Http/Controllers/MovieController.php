@@ -48,7 +48,7 @@ class MovieController extends Controller
             'eventday_id' => $request->input('eventday_id'),
             'user_id' => $request->input('user_id'),
         ]);
-        return redirect()->route('admin.index');
+        return redirect()->route('admin.createShowTime');
     }
 
     /**

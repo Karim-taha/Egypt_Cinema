@@ -38,7 +38,7 @@ class EventdaysController extends Controller
         $eventDays = $request->all();
         // dd($eventDays);
         Eventday::create($eventDays);
-        return redirect()->route('admin.index');
+        return redirect()->route('admin.createMovie');
     }
 
     /**

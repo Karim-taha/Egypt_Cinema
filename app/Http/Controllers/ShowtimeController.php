@@ -38,7 +38,7 @@ class ShowtimeController extends Controller
         $showtimes = $request->all();
         // dd($showtimes);
         Showtime::create($showtimes);
-        return redirect()->route('admin.index');
+        return redirect()->route('admin.movies');
     }
 
     /**
